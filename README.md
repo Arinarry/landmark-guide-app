@@ -27,6 +27,7 @@
 Интерактивные карты:
 
 <img width="914" height="704" alt="image" src="https://github.com/user-attachments/assets/221963ba-d207-4c8d-bb75-952629a57415" />
+
 ***
 Компонентная структура интерфейса 
 
