@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_all"
+        android:checkable="true"
+        android:title="Все"/>
+    <item
+        android:id="@+id/filter_memorials"
+        android:checkable="true"
+        android:title="Мемориал"/>
+    <item
+        android:id="@+id/filter_museums"
+        android:checkable="true"
+        android:title="Музей"/>
+    <item
+        android:id="@+id/filter_monuments"
+        android:checkable="true"
+        android:title="Памятник"/>
+    <item
+        android:id="@+id/filter_parks"
+        android:checkable="true"
+        android:title="Парк"/>
+    <item
+        android:id="@+id/filter_religions"
+        android:checkable="true"
+        android:title="Религиозный объект"/>
+    <item
+        android:id="@+id/filter_theatre"
+        android:checkable="true"
+        android:title="Театр"/>
+
+</menu>

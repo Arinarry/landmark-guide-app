@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/reviewLandmark"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:text="Landmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/reviewContent"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:text="Comment"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/reviewDate"
+            android:textSize="13sp"
+            android:textColor="#888"
+            android:text="DATE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/delete_comment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Add to favorite"
+        android:src="@drawable/trash2"
+        app:tint="#8B0000" />
+</LinearLayout>

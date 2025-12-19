@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/home"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/search"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/heart"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/photo"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp" />
+        <Button
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/user"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:padding="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Аватарка -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:cardCornerRadius="60dp"
+                    app:cardElevation="0dp">
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avatar2"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="left">
+                    <!-- Имя пользователя -->
+                    <TextView
+                        android:id="@+id/profileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"/>
+
+                    <TextView
+                        android:id="@+id/emailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Кнопка для определения города -->
+            <Button
+                android:id="@+id/cityButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                android:text="Новосибирск"
+                android:drawableLeft="@drawable/strl"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="0dp"/>
+            <!-- Кнопка избранного-->
+            <Button
+                android:id="@+id/likeButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/gray"
+                android:drawableLeft="@drawable/heart2"
+                android:drawableRight="@drawable/arrow_right"
+                android:drawableTint="@color/white"
+                android:text="Избранное"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:cornerRadius="0dp" />
+            <!-- Кнопка заметок-->
+            <Button
+                android:id="@+id/noteButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="-6dp"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                android:text="Мои отзывы"
+                android:drawableLeft="@drawable/star"
+                android:drawableRight="@drawable/arrow_right"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="0dp" />
+            <!-- Кнопка редактирования профиля-->
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="-6dp"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                android:text="Редактирование профиля"
+                android:drawableLeft="@drawable/note"
+                android:drawableRight="@drawable/arrow_right"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="0dp"/>
+            <!-- Кнопка выхода -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="-6dp"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                android:text="Выйти"
+                android:drawableLeft="@drawable/exit"
+                android:drawableRight="@drawable/arrow_right"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/arrow"
+            android:drawableTint="@color/white"
+            android:paddingTop="15dp" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="GuideForU"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

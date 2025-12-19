@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableTop="@drawable/arrow"
+            android:drawableTint="@color/white"
+            android:paddingTop="15dp" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="GuideForU"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp">
+
+        <com.yandex.mapkit.mapview.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.yandex.mapkit.mapview.MapView>
+
+        <LinearLayout
+            android:id="@+id/zoom_controls"
+            android:layout_width="48dp"
+            android:layout_height="96dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="300dp"
+            android:orientation="vertical"
+            android:background="@drawable/zoom_controls_bg"
+            android:elevation="8dp">
+
+            <ImageButton
+                android:id="@+id/zoom_in_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/plus"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="#E0E0E0"/>
+
+            <ImageButton
+                android:id="@+id/zoom_out_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/minus"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#808080"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/type_car"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableLeft="@drawable/car"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp"
+            android:textAlignment="textStart"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/type_moto"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableLeft="@drawable/moto"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp"
+            android:textAlignment="textStart"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/type_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gray"
+            android:drawableLeft="@drawable/truck"
+            android:drawableTint="@color/white"
+            android:paddingTop="20dp"
+            android:textAlignment="textStart"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
